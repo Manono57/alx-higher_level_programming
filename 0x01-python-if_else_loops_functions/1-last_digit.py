@@ -3,8 +3,9 @@ import random
 number = random.randint(-10000, 10000)
 
 last_digit = abs(number) % 10
-
-output_string = f"The string Last digit of {number} is {last_digit} and is"
+if number < 0:
+    last_digit = -last_digit
+output_string = (f"The string Last digit of {number} is {last_digit} and is")
 
 if last_digit > 5:
     print(output_string, "greater than 5")
